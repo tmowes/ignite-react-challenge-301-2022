@@ -1,13 +1,9 @@
-# Desafio 02 - Coffee Delivery
+# Desafio 03 - GitHub Blog
 
 ## Sobre o desafio
 
-Desenvolver uma aplicação para gerenciar um carrinho de compras de uma cafeteria fictícia, que contém as seguintes funcionalidades:
+Desenvolver uma aplicação que utilizará da API do GitHub para buscar issues de um repositório, dados do seu perfil e exibir elas como um blog.
 
-- Listagem de produtos (cafés) disponíveis para compra
-- Adicionar uma quantidade específicas de itens no carrinho
-- Aumentar ou remover a quantidade de itens no carrinho
-- Formulário para o usuário preencher o seu endereço
-- Exibir o total de itens no carrinho no Header
-- Exibir o valor total da soma de itens no carrinho multiplicados pelo valor
-
+- Listagem do seu perfil com imagem, número de seguidores, nome e outras informações disponíveis pela API do GitHub.
+- Listar e filtrar todas as issues do repositório com um pequeno resumo do conteúdo dela
+- Criar uma página para exibir um post (issue) completo
