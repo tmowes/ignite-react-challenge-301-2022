@@ -1,2 +1,1 @@
-export { useCart } from './CartProvider'
-export { useCheckout } from './CheckoutProvider'
+export { usePost } from './PostProvider'

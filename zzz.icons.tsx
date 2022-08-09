@@ -15,6 +15,15 @@ import {
   Timer,
   Trash,
 } from 'phosphor-react'
+import {
+  FaGithub,
+  FaBuilding,
+  FaUserFriends,
+  FaCalendarDay,
+  FaChevronLeft,
+  FaComment,
+  FaExternalLinkAlt,
+} from 'react-icons/fa'
 
 export function Icons() {
   return (

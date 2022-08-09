@@ -4,8 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 
 import { THEME_KEY_STORAGE } from './constants/localStorageKeys'
-import { CartProvider } from './contexts/CartProvider'
-import { CheckoutProvider } from './contexts/CheckoutProvider'
+import { PostProvider } from './contexts/PostProvider'
 import { AppRoutes } from './routes/app.routes'
 import GlobalStyles from './styles/GlobalStyles'
 import * as themes from './styles/themes'
@@ -24,11 +23,9 @@ export function App() {
     <ThemeProvider theme={themes[selectedTheme]}>
       <GlobalStyles />
       <BrowserRouter>
-        <CartProvider>
-          <CheckoutProvider>
-            <AppRoutes />
-          </CheckoutProvider>
-        </CartProvider>
+        <PostProvider>
+          <AppRoutes />
+        </PostProvider>
       </BrowserRouter>
     </ThemeProvider>
   )

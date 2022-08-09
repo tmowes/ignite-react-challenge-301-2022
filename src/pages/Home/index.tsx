@@ -1,12 +1,14 @@
-import { HeroSection } from './HeroSection'
-import { ProductsSection } from './ProductsSection'
+import { PostsSection } from './PostsSection'
+import { ProfileSection } from './ProfileSection'
+import { SearchSection } from './SearchSection'
 import * as S from './styles'
 
 export function Home() {
   return (
     <S.Container>
-      <HeroSection />
-      <ProductsSection />
+      <ProfileSection />
+      <SearchSection />
+      <PostsSection />
     </S.Container>
   )
 }

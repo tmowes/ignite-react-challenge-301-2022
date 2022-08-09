@@ -13,7 +13,11 @@ ${({ theme: { colors } }) => css`
   }
 
   html {
-    font-size: 100%;
+    font-size: 62.5%;
+    line-height: 160%;
+    font: 400 1rem 'Nunito', sans-serif, -apple-system;
+    line-height: 1.6;
+    border: 0;
   }
 
   body {
@@ -23,7 +27,7 @@ ${({ theme: { colors } }) => css`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: ${colors.background};
-    color: ${colors['base-title']};
+    color: ${colors.title};
     position: relative;
   }
 
@@ -31,8 +35,8 @@ ${({ theme: { colors } }) => css`
   input,
   textarea,
   button {
-    font: 400 1rem 'Roboto', sans-serif, -apple-system;
-    line-height: 1.25;
+    font: 400 1rem 'Nunito', sans-serif, -apple-system;
+    line-height: 1.6;
     border: 0;
   }
 
