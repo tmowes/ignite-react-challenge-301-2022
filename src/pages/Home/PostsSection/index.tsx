@@ -1,17 +1,14 @@
+import { posts } from '../../../temp/profile'
+import { PostSummaryCard } from './PostSummaryCard'
 import * as S from './styles'
 
 export function PostsSection() {
   return (
     <S.Container>
-      <S.Title>Nossos Posts</S.Title>
       <S.Posts>
-        {/* {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            onAddProduct={() => addProductToCart(product)}
-          />
-        ))} */}
+        {posts.map((post) => (
+          <PostSummaryCard key={post.id} post={post} />
+        ))}
       </S.Posts>
     </S.Container>
   )

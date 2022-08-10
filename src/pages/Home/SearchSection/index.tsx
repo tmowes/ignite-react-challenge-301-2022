@@ -22,10 +22,21 @@ export function SearchSection() {
 
   return (
     <S.Container onSubmit={handleSubmit(onSearchTransactions)}>
-      <input type="text" placeholder="Busque por publicações" {...register('query')} />
-      <button type="submit" disabled={isSubmitting}>
-        <MagnifyingGlass size={20} />
-      </button>
+      <S.Info>
+        <S.Title>Publicações</S.Title>
+        <S.InfoCount>6 publicações</S.InfoCount>
+      </S.Info>
+      <S.SearchForm>
+        <S.SearchInput
+          type="text"
+          autoComplete="off"
+          placeholder="Busque conteúdo"
+          {...register('query')}
+        />
+        <S.SearchButton type="submit" disabled={isSubmitting}>
+          <MagnifyingGlass size={20} />
+        </S.SearchButton>
+      </S.SearchForm>
     </S.Container>
   )
 }

@@ -7,7 +7,7 @@ export const Container = styled.main`
     width: 100%;
     padding: 2rem;
     background: ${colors.profile};
-    margin: -5.5rem auto 2rem;
+    margin: -5.5rem auto 0;
     border-radius: 10px;
     box-shadow: ${shadows.default}, rgba(20, 88, 156, 0.4) 0px -32px 96px -32px;
   `}
@@ -18,13 +18,6 @@ export const Content = styled.div`
   flex: 1;
   flex-direction: column;
   gap: 1rem;
-`
-
-export const ProfileImage = styled.img`
-  width: 9.25rem;
-  height: 9.25rem;
-  border-radius: 8px;
-  margin-right: 2rem;
 `
 
 export const Title = styled.h1`
@@ -43,23 +36,7 @@ export const Header = styled.div`
   height: 2rem;
 `
 
-export const SubTitle = styled.span`
-  ${({ theme: { colors } }) => css`
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: ${colors.subtitle};
-  `}
-`
-
-export const Description = styled.span`
-  ${({ theme: { colors } }) => css`
-    font-size: 1rem;
-    font-weight: 400;
-    color: ${colors.text};
-  `}
-`
-
-export const Footer = styled.div`
+export const ExtraInfo = styled.div`
   display: flex;
   align-items: center;
   gap: 1.5rem;
