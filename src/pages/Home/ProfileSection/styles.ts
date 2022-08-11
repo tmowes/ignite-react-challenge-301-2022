@@ -4,6 +4,7 @@ export const Container = styled.main`
   ${({ theme: { colors, shadows } }) => css`
     display: flex;
     max-width: 54rem;
+    height: 13.25rem;
     width: 100%;
     padding: 2rem;
     background: ${colors.profile};
