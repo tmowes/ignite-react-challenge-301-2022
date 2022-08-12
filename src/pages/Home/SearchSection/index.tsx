@@ -4,9 +4,11 @@ import { useForm } from 'react-hook-form'
 
 import { SearchFormSchema, searchSchema } from './searchSchema'
 import * as S from './styles'
+import { SearchSectionProps } from './types'
 
-export function SearchSection() {
-  // const { fetchPosts } = usePosts()
+export function SearchSection(props: SearchSectionProps) {
+  const { filterPosts, count } = props
+
   const {
     register,
     handleSubmit,
@@ -15,16 +17,20 @@ export function SearchSection() {
     resolver: zodResolver(searchSchema),
   })
 
-  async function onSearchTransactions({ query }: SearchFormSchema) {
-    // await fetchPosts(query)
-    console.log({ query })
+  async function onSearchPosts({ query }: SearchFormSchema) {
+    await filterPosts(query)
   }
 
   return (
-    <S.Container onSubmit={handleSubmit(onSearchTransactions)}>
+    <S.Container onSubmit={handleSubmit(onSearchPosts)}>
       <S.Info>
         <S.Title>Publicações</S.Title>
-        <S.InfoCount>6 publicações</S.InfoCount>
+        {count > 0 && (
+          <S.InfoCount>
+            {count}
+            {count === 1 ? 'publicação' : ' publicações'}
+          </S.InfoCount>
+        )}
       </S.Info>
       <S.SearchForm>
         <S.SearchInput

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 import { FaGithub, FaBuilding, FaUserFriends, FaExternalLinkAlt } from 'react-icons/fa'
 
@@ -10,13 +10,14 @@ import { ProfileModel } from './types'
 export function ProfileSection() {
   const [profile, setProfile] = useState<ProfileModel | null>(null)
 
-  useEffect(() => {
-    // eslint-disable-next-line prettier/prettier
-    (async () => {
-      const { data } = await api.get('users/tmowes')
-      setProfile(data)
-    })()
+  const fetchProfile = useCallback(async () => {
+    const { data } = await api.get<ProfileModel>('users/tmowes')
+    setProfile(data)
   }, [])
+
+  useEffect(() => {
+    fetchProfile()
+  }, [fetchProfile])
 
   return (
     <S.Container>

@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from 'react'
 import removeMarkdown from 'remove-markdown'
 
 import { api } from '../../lib/axios'
-import { formatDistanceDate } from '../../utils/date/formatDistanceDate'
+import { formatDateDistance } from '../../utils/date/formatDateDistance'
 import { PostsSection } from './PostsSection'
 import { ProfileSection } from './ProfileSection'
 import { SearchSection } from './SearchSection'
@@ -31,7 +31,7 @@ export function Home() {
         id: number,
         title,
         body: parseBody,
-        createdAt: formatDistanceDate(created_at),
+        createdAt: formatDateDistance(created_at),
       }
     })
 
@@ -45,7 +45,7 @@ export function Home() {
   return (
     <S.Container>
       <ProfileSection />
-      <SearchSection />
+      <SearchSection filterPosts={fetchPosts} count={postsSummary.length} />
       <PostsSection posts={postsSummary} />
     </S.Container>
   )

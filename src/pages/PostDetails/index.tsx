@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 
 import { Loading } from '../../components/Loading'
 import { api } from '../../lib/axios'
-import { formatDistanceDate } from '../../utils/date/formatDistanceDate'
+import { formatDateDistance } from '../../utils/date/formatDateDistance'
 import { PostHeader } from './PostHeader'
 import * as S from './styles'
 import { PostData, PostDetailsParams, PostFetchGet } from './types'
@@ -25,8 +25,8 @@ export function PostDetails() {
       title: data.title,
       body: data.body,
       comments: data.comments,
-      createdAt: formatDistanceDate(data.created_at),
-      updatedAt: formatDistanceDate(data.updated_at),
+      createdAt: formatDateDistance(data.created_at),
+      updatedAt: formatDateDistance(data.updated_at),
     })
   }, [])
 

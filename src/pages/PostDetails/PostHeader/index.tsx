@@ -1,7 +1,5 @@
 import {
   FaGithub,
-  FaBuilding,
-  FaUserFriends,
   FaExternalLinkAlt,
   FaChevronLeft,
   FaCalendarDay,
@@ -10,7 +8,6 @@ import {
 import { NavLink } from 'react-router-dom'
 
 import { IconLabel } from '../../../components/IconLabel'
-import { profile } from '../../../temp/profile'
 import * as S from './styles'
 import { PostHeaderProps } from './types'
 
@@ -32,7 +29,7 @@ export function PostHeader(props: PostHeaderProps) {
             <FaExternalLinkAlt />
           </S.ExternalLink>
         </S.Header>
-        <S.Title>{profile.bio}</S.Title>
+        <S.Title>{data.title}</S.Title>
         <S.ExtraInfo>
           <IconLabel icon={<FaGithub />} label={data.login} />
           <IconLabel icon={<FaCalendarDay />} label={data.createdAt} />
