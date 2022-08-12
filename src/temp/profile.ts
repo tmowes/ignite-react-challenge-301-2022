@@ -38,43 +38,37 @@ export const posts = [
   {
     id: 1,
     title: 'JavaScript data types and data structures',
-    description:
-      'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.',
-    createAt: 'Há 1 dia',
+    body: 'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.',
+    createdAt: 'Há 1 dia',
   },
   {
     id: 2,
     title: 'JavaScript data types and data structures',
-    description:
-      'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.',
-    createAt: 'Há 1 dia',
+    body: 'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.',
+    createdAt: 'Há 1 dia',
   },
   {
     id: 3,
     title: 'JavaScript data types and data structures',
-    description:
-      'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.',
-    createAt: 'Há 1 dia',
+    body: 'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.',
+    createdAt: 'Há 1 dia',
   },
   {
     id: 4,
     title: 'JavaScript data types and data structures',
-    description:
-      'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.',
-    createAt: 'Há 1 dia',
+    body: 'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.',
+    createdAt: 'Há 1 dia',
   },
   {
     id: 5,
     title: 'JavaScript data types and data structures',
-    description:
-      'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.',
-    createAt: 'Há 1 dia',
+    body: 'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.',
+    createdAt: 'Há 1 dia',
   },
   {
     id: 6,
     title: 'JavaScript data types and data structures',
-    description:
-      'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.',
-    createAt: 'Há 1 dia',
+    body: 'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.',
+    createdAt: 'Há 1 dia',
   },
 ]

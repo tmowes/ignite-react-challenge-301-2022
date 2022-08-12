@@ -12,8 +12,11 @@ import { NavLink } from 'react-router-dom'
 import { IconLabel } from '../../../components/IconLabel'
 import { profile } from '../../../temp/profile'
 import * as S from './styles'
+import { PostHeaderProps } from './types'
 
-export function PostHeader() {
+export function PostHeader(props: PostHeaderProps) {
+  const { data } = props
+
   return (
     <S.Container>
       <S.Content>
@@ -24,16 +27,21 @@ export function PostHeader() {
               VOLTAR
             </S.ExternalLink>
           </NavLink>
-          <S.ExternalLink href={profile.html_url} target="_blank" rel="noopener">
+          <S.ExternalLink href={data.url} target="_blank" rel="noopener">
             VER NO GITHUB
             <FaExternalLinkAlt />
           </S.ExternalLink>
         </S.Header>
         <S.Title>{profile.bio}</S.Title>
         <S.ExtraInfo>
-          <IconLabel icon={<FaGithub />} label={profile.login} />
-          <IconLabel icon={<FaCalendarDay />} label="Há 1 dia" />
-          <IconLabel icon={<FaComment />} label={`${profile.followers} comentários`} />
+          <IconLabel icon={<FaGithub />} label={data.login} />
+          <IconLabel icon={<FaCalendarDay />} label={data.createdAt} />
+          {data.comments > 0 && (
+            <IconLabel
+              icon={<FaComment />}
+              label={`${data.comments} comentário ${data.comments > 1 ? 's' : ''}`}
+            />
+          )}
         </S.ExtraInfo>
       </S.Content>
     </S.Container>

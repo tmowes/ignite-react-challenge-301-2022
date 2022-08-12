@@ -11,9 +11,9 @@ export function PostSummaryCard(props: PostSummaryCardProps) {
       <S.Container>
         <S.Header>
           <S.Title>{post.title}</S.Title>
-          <S.CreatedAt>{post.createAt}</S.CreatedAt>
+          <S.CreatedAt>{post.createdAt}</S.CreatedAt>
         </S.Header>
-        <S.Summary>{post.description}</S.Summary>
+        <S.Summary>{post.body}</S.Summary>
       </S.Container>
     </NavLink>
   )

@@ -1,8 +1,9 @@
-import { posts } from '../../../temp/profile'
 import { PostSummaryCard } from './PostSummaryCard'
 import * as S from './styles'
+import { PostsSectionProps } from './types'
 
-export function PostsSection() {
+export function PostsSection(props: PostsSectionProps) {
+  const { posts } = props
   return (
     <S.Container>
       <S.Posts>
